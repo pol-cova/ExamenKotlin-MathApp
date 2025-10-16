@@ -7,8 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.List
-import androidx.compose.material.icons.outlined.Face
 import androidx.compose.material.icons.rounded.Face
 import androidx.compose.material.icons.rounded.Home
 import androidx.compose.material3.Icon
@@ -43,6 +41,7 @@ data class TabItem(
     val icon: ImageVector
 )
 
+@Preview()
 @Composable
 fun MainView(modifier: Modifier = Modifier) {
     var selectedTabIndex by remember { mutableIntStateOf(0) }
@@ -70,13 +69,5 @@ fun MainView(modifier: Modifier = Modifier) {
             0 -> CourseScreen(Modifier.padding(innerPadding))
             1 -> MeScreen(Modifier.padding(innerPadding))
         }
-    }
-}
-
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun MainViewPreview() {
-    Examen_MathAppTheme {
-        MainView()
     }
 }
